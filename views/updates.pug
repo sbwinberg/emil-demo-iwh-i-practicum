@@ -1,0 +1,26 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Updates
+
+        form(action="/update", method="post")
+            label(for="name") name 
+                input(type="text", name="name")
+            label(for="author") author
+                input(type="text", name="author")
+            label(for="genre") genre 
+                input(type="text", name="genre")
+            label(for="year") year
+                input(type="number", name="year")
+            label(for="name") number of pages
+                input(type="number", name="nopages")
+            button(type="submit") submit
+
+
+        a(href="/") 
+            button.btn Return to homepage
+        

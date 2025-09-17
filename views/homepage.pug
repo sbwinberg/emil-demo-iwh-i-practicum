@@ -1,0 +1,26 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Home
+        a(href="/update-cobj") Add/Update this table
+        table
+            tr
+                th Name
+                th Author
+                th Genre
+                th Year
+                th Number of pages
+                - for (card in data)
+                    tr
+                        td=data[card].properties.name  
+                        td=data[card].properties.author
+                        td=data[card].properties.genre
+                        td=data[card].properties.year
+                        td=data[card].properties.nopages
+
+
+    
